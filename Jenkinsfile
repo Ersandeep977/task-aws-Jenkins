@@ -2,12 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Git Checkout') {
             steps {
                 git 'https://github.com/Ersandeep977/task-aws-Jenkins.git'
             }
         }
-        stage('Build and Run Application') {
+        stage('word count') {
             steps {
                 script {
                     sh 'chmod +x word_count.sh' // Make the script executable
